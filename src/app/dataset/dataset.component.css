@@ -1,0 +1,58 @@
+div.dataset {
+  width: 99vw;
+  border-collapse: collapse;
+  background-color: #f7f7f7;
+  font-size: 16pt;
+  font-weight: normal;
+  padding-left: 0;
+  padding-top: 0;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 0.6vw;
+  overflow: hidden;
+  max-width: 800px;
+  width: 100vw;
+  margin: 0 auto;
+  position: relative;
+}
+table * {
+  position: relative;
+  font-family: sans-serif;
+}
+table td, table th {
+  padding-left: 8px;
+}
+table thead tr {
+  background: #FFED86;
+  font-size: 1.75vh;
+}
+table thead tr.data-types {
+  background: #999999;
+  font-size: 0.75vh
+}
+
+table tbody tr {
+  font-size: 2vh;
+  border-bottom: 1px solid #E3F1D5;
+}
+table tbody tr:nth-child(even) {
+  background: #EEEEEE;
+}
+
+/*
+table tbody tr:nth-child(1):before {
+  background-color: #333333;
+}
+table tbody tr:nth-child(2):before {
+  background-color: white;
+}*/
+
+body {
+  background: #9BC86A;
+  font: 400 14px "Calibri", "Arial";
+  padding: 20px;
+}

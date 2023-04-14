@@ -1,0 +1,18 @@
+<div class="dataset" *ngIf="dataset">
+  <table>
+    <thead>
+      <tr>
+        <td *ngFor="let name of dataset.header">{{name}}</td>
+      </tr>
+      <tr class="data-types">
+        <td *ngFor="let type of dataset.data_types">{{type}}</td>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let row of dataset.rows"> <!-- TODO: what if the dataset has no columns? -->
+        <td *ngFor="let val of row">{{val}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
