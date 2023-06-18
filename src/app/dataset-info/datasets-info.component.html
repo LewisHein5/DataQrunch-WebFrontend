@@ -1,0 +1,16 @@
+<div class = datasets>
+<table>
+  <thead>
+  <tr>
+    <td>Dataset Name</td>
+    <td>Size</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let info of datasets_info">
+    <td><a [routerLink]="['/datasets', info.id]">{{info.id}}</a> </td>
+    <td>{{info.size}}</td>
+  </tr>
+  </tbody>
+</table>
+</div>
