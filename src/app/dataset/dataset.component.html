@@ -10,9 +10,20 @@
     </thead>
 
     <tbody>
-      <tr *ngFor="let row of dataset.rows"> <!-- TODO: what if the dataset has no columns? -->
-        <td *ngFor="let val of row">{{val}}</td>
+      <tr *ngFor="let row of this.range(0, this.MaxRows-1)">
+        <td *ngFor="let col of this.range(0, this.MaxColumns-1)" class="{{getCellStyle([col, row])}}">{{getCellContents([col, row])}}</td>
       </tr>
     </tbody>
+
+      <!--</tr>
+      <tr *ngFor="let row of dataset.rows; let row_index = index">--> <!-- TODO: what if the dataset has no columns? -->
+        <!--<td *ngFor="let val of row; let col_index = index" [tabIndex]="(row_index*dataset.rows[0].length)+col_index+1">
+          <span *ngIf="!isCellEditable([row_index, col_index])"
+                (focus)="makeCellEditable([row_index, col_index])"
+                (click)="makeCellEditable([row_index, col_index])">{{val.value}}</span>
+          <input *ngIf="isCellEditable([row_index, col_index])" [(ngModel)]="val.value" (blur)="exitCellEditable([row_index, col_index])"/>
+        </td>
+      </tr>
+    </tbody>-->
   </table>
 </div>

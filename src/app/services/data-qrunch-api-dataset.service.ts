@@ -17,7 +17,7 @@ export class DataQrunchApiDatasetService {
   }
 
   getDataset(id: String): Observable<DatasetColumnMajorModel> {
-    let reqOptions = new HttpHeaders({'session_key': '0010'});//TODO: Insecure
+    let reqOptions = new HttpHeaders({'session_key': '0110'});//TODO: Insecure
     return this.http.get<DatasetColumnMajorModel>(
       this.constants.API_DATASETS_ENDPOINT+"/"+id,
       {'headers': reqOptions}

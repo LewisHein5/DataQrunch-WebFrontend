@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DatasetsInfoComponent } from './dataset-info/datasets-info.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DatasetComponent } from './dataset/dataset.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DatasetComponent } from './dataset/dataset.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
